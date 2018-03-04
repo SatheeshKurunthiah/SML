@@ -72,7 +72,10 @@ def check_data(matrix):
         if prev is not None:
             if row[0] - prev[0] != 60:
                 print 'Data not consistent..!!'
+                return False
         prev = row
+
+    return True
 
 
 def save_file(data, filename):
@@ -80,12 +83,12 @@ def save_file(data, filename):
     input_folder = current_directory + '/../Data'
     pd.DataFrame(data).to_csv(input_folder + '/' + filename + '.csv',
                               header=['Timestamp', 'Open', 'High', 'Low', 'Close', 'Volume_(BTC)', 'Volume_(Currency)',
-                                      'Weighted_Price'])
+                                      'Weighted_Price'], index=False)
 
 
 u_inp = raw_input("\nEnter file name to load\n")
 
 original = load_data(u_inp)
 processed = process_data(original)
-check_data(processed)
-save_file(processed, 'Processed')
+if check_data(processed):
+    save_file(processed, 'Processed')
