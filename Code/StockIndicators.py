@@ -31,5 +31,17 @@ def calcSignalLine(closing_price_list):
 
 	return signal
 
+def calcKDS(data,lookback_period):
+	K = np.zeros(data.getLength())
+	D = np.zeros(data.getLength())
+
+	for row in range(lookback_period,data.getLength()):
+		lowest_low = np.min(data.getCol('Low')[row-lookback_period:row+1])
+		highest_high = np.max(data.getCol('High')[row-lookback_period:row+1])
+		current_close = data.getCol('Close')[row]
+		K[row]=(current_close - lowest_low) / (highest_high - lowest_low) * 100
+		D[row]=np.average(K[row-3:row])
+	#TODO: Handle NaN 
+	return(K,D)
 
 
