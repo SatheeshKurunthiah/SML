@@ -13,14 +13,15 @@ def calcEMA(data,time_period):
 	return ema
 
 
-def calcMACD(closing_price_list):
+def calcMACD(closing_price_list, time_period_start, time_period_end):
+	assert(time_period_end > time_period_start), "time_period_start must be less than time_period_end"
 	closing_price_list = np.asarray(closing_price_list,float)
 
-	ema12 = calcEMA(closing_price_list,12)
-	ema26 = calcEMA(closing_price_list,26)
+	ema_start = calcEMA(closing_price_list,time_period_start)
+	ema_end = calcEMA(closing_price_list,time_period_end)
 
-	macd = ema12 - ema26
-	macd[0:25] = 0 # Should this be ?
+	macd = ema_start - ema_end
+	macd[0:time_period_end - 1] = 0 # Should this be ?
 
 	return macd
 
