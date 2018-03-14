@@ -46,3 +46,52 @@ def calcKDS(data,lookback_period):
 	return(K,D)
 
 
+def RSI(data, periods):
+    data = data[:, 4]
+    rsi = []
+    sum_loss = 0
+    sum_gain = 0
+    idx = 0
+    for i in range(0, periods - 1):
+        change = data[i + 1] - data[i]
+        if change < 0:
+            sum_loss -= change
+        else:
+            sum_gain += change
+        rsi.append(0.0)
+        idx += 1
+    avg_loss = sum_loss / periods
+    avg_gain = sum_gain / periods
+    rsi.append(100 - (100 / (1 + (avg_gain / avg_loss))))
+
+    while idx < len(data) - 1:
+        change = data[idx + 1] - data[idx]
+        if change < 0:
+            avg_gain = (avg_gain * (periods - 1)) / periods
+            avg_loss = ((avg_loss * (periods - 1)) - change) / periods
+        else:
+            avg_loss = avg_loss * (periods - 1) / periods
+            avg_gain = (avg_gain * (periods - 1) + change) / periods
+
+        rsi.append(100 - (100 / (1 + (avg_gain / avg_loss))))
+        idx += 1
+
+    return np.array(rsi)
+
+
+def OBV(data):
+    idx = 0
+    obv = [0]
+    while idx < len(data) - 1:
+        change = data[idx + 1, 4] - data[idx, 4]
+        if change > 0:
+            obv.append(obv[idx] + data[idx + 1, 6])
+        elif change < 0:
+            obv.append(obv[idx] - data[idx + 1, 6])
+        else:
+            obv.append(0)
+        idx += 1
+
+    return np.array(obv)
+
+
