@@ -43,7 +43,7 @@ def calcKDS(data,lookback_period):
 		K[row]=(current_close - lowest_low) / (highest_high - lowest_low) * 100
 		D[row]=np.average(K[row-3:row])
 	#TODO: Handle NaN 
-	return(K,D)
+	return K, D
 
 
 def RSI(data, periods):
@@ -85,9 +85,9 @@ def OBV(data):
     while idx < len(data) - 1:
         change = data[idx + 1, 4] - data[idx, 4]
         if change > 0:
-            obv.append(obv[idx] + data[idx + 1, 6])
+            obv.append(obv[idx] + data[idx + 1, 5])
         elif change < 0:
-            obv.append(obv[idx] - data[idx + 1, 6])
+            obv.append(obv[idx] - data[idx + 1, 5])
         else:
             obv.append(0)
         idx += 1

@@ -1,0 +1,13 @@
+TIMESTAMP = 'Timestamp'
+OPEN = 'Open'
+HIGH = 'High'
+LOW = 'Low'
+CLOSING_PRICE = 'Close'
+VOLUME_QUANTITY = 'Volume_BTC'
+TURNOVER = 'Volume_Currency'
+W_PRICE = 'Weighted_Price'
+MACD_PERIOD = 26
+MACD_SIGNAL_PERIOD = 9
+KDS_PERIOD = 14
+RSI_PERIOD = 15
+TARGET_BINS = [10.0,5.0,2.5]

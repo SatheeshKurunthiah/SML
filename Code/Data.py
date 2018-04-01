@@ -1,33 +1,36 @@
 import numpy as np
+import constants as cns
 
-data = []
-import random
+_data = []
+_PICKLE_PATH = '../Data/coinbase_pickle.npy'
 
-def load(filename):
-	global data
-	data = np.genfromtxt(filename,delimiter=',',names=True)
+
+def load():
+    global _data
+    # _data = np.genfromtxt('../Data/coinbaseUSD_1-min_data_2014-12-01_to_2018-01-08.csv',delimiter=',',names=True)
+    _data = np.load(_PICKLE_PATH)
+
+def pickle_data():
+    np.save(_PICKLE_PATH, _data)
+
+def getRawData():
+    return _data.view(np.float64).reshape(_data.shape + (-1,))
+
 
 def getCol(name):
-	return data[name]
+	return _data[name]
 
 def getRow(row):
-	return np.asarray(data[row].tolist())
+	return np.asarray(_data[row].tolist())
 
 def getNames():
-	return data.dtype.names
+	return _data.dtype.names
 
 def getLength():
-	return len(data)
+	return len(_data)
 
 
-def randomSample(count):
-	endIndex = random.randint(count, data.shape[0]) 
-	beginIndex = endIndex - count
-	rawChunk=data[beginIndex:endIndex]
-	chunk=[]
-	for index, row in enumerate(rawChunk):
-		chunk.append(row.tolist())     
-	return chunk
 
 
-load('../Data/coinbaseUSD_1-min_data_2014-12-01_to_2018-01-08.csv')
+load()
+# load('../Data/coinbaseUSD_1-min_data_2014-12-01_to_2018-01-08.csv')
