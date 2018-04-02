@@ -12,15 +12,15 @@ def load():
     if(os.path.exists(_PICKLE_PATH) and os.path.isfile(_PICKLE_PATH)):
     	_data = np.load(_PICKLE_PATH)
     else:
-    	print "Reading from csv..."
+    	print ("Reading from csv...")
     	_data = np.genfromtxt('../Data/coinbaseUSD_1-min_data_2014-12-01_to_2018-01-08.csv',delimiter=',',names=True)
     	pickle_data()
 
 
 def pickle_data():
-    print "Pickling _data..."
+    print ("Pickling _data...")
     np.save(_PICKLE_PATH, _data)
-    print "Done"
+    print ("Done")
 
 def getRawData():
     return _data.view(np.float64).reshape(_data.shape + (-1,))
