@@ -9,11 +9,11 @@ class PeriodSample:
     def __init__(self, period_size):
         self._period_size = period_size
         self._data = data.getRawData()
+        self._grouped_data = grp.group_data(self._data, self._period_size)
         self._seed = 1000
 
     def __getSample(self, train_periods, test_periods):
-        grouped_data = grp.group_data(self._data, self._period_size)
-        return grp.randomSample(self._seed, grouped_data[self._period_size:], train_periods, test_periods)
+        return grp.randomSample(self._seed, self._grouped_data, train_periods, test_periods)
 
     def classifyBins(self, value):
         bin = -1
