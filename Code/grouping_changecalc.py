@@ -53,7 +53,8 @@ def save_file(data, filename):
 
 
 def randomSample(seed,data, train_periods, test_periods):
-    random.seed(seed)
+    if not seed == -1:
+        random.seed(seed)
     beginIndex = random.randint(0, data.shape[0]-train_periods+test_periods+1)
     endIndex = beginIndex + train_periods
     return data[beginIndex:endIndex], data[endIndex:endIndex+test_periods]

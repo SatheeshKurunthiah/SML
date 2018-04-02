@@ -6,11 +6,11 @@ import numpy as np
 
 
 class PeriodSample:
-    def __init__(self, period_size):
+    def __init__(self, period_size, seed=-1):
         self._period_size = period_size
         self._data = data.getRawData()
         self._grouped_data = grp.group_data(self._data, self._period_size)
-        self._seed = 1000
+        self._seed = seed
 
     def __getSample(self, train_periods, test_periods):
         return grp.randomSample(self._seed, self._grouped_data, train_periods, test_periods)
