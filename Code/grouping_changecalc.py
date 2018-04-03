@@ -34,7 +34,7 @@ def group_data(matrix, period):
         new_matrix[k][5] = matrix[j:i, 5].sum()
         new_matrix[k][6] = matrix[j:i, 6].sum()
         new_matrix[k][7] = matrix[i][7]
-        new_matrix[k][8] = ((matrix[i][4] - matrix[j][4]) / matrix[j][4]) * 100
+        new_matrix[k][8] = ((matrix[i][4] - matrix[j][1]) / matrix[j][4]) * 100
         j = i
         k += 1
         i += period
@@ -42,7 +42,7 @@ def group_data(matrix, period):
 
 
 def total_change(matrix):
-    return matrix[matrix.shape[0] - 1][4] - matrix[0][4] / matrix[0][4] * 100
+    return (matrix[matrix.shape[0] - 1][4] - matrix[0][1]) / matrix[0][1] * 100
 
 
 def save_file(data, filename):
