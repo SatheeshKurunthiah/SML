@@ -11,16 +11,6 @@ import math
 import random
 import constants as cns
 import numpy as np
-import pandas as pd
-
-
-def load_data(filename):
-    current_directory = os.getcwd()
-    input_folder = current_directory + '/Data'
-    bitcoin_data = pd.read_csv(input_folder + '/' + filename + '.csv').sort_values(['Timestamp'])
-    bitcoin_matrix = bitcoin_data.as_matrix()
-    return bitcoin_matrix
-
 
 def group_data(matrix, period):
     i, j, k = period - 1, 0, 0
@@ -45,15 +35,6 @@ def total_change(matrix):
     return (matrix[matrix.shape[0] - 1][4] - matrix[0][1]) / matrix[0][1] * 100
 
 
-def save_file(data, filename):
-    current_directory = os.getcwd()
-    print(current_directory)
-    input_folder = current_directory + '/Data'
-    pd.DataFrame(data).to_csv(input_folder + '/' + filename + '.csv',
-                              header=['Timestamp', 'Open', 'High', 'Low', 'Close', 'Volume_(BTC)', 'Volume_(Currency)',
-                                      'Weighted_Price', 'Change'], index=False)
-
-
 def randomSample(seed, data, train_periods, test_periods):
     if not seed == -1:
         random.seed(seed)
@@ -61,8 +42,3 @@ def randomSample(seed, data, train_periods, test_periods):
     endIndex = beginIndex + train_periods
     return data[beginIndex:endIndex], data[endIndex:endIndex + test_periods]
 
-# u_inp="Processed"
-# original = load_data(u_inp)
-# grp_data = group_data(original)
-# print(grp_data[0])
-# save_file(grp_data, 'Grouped')
