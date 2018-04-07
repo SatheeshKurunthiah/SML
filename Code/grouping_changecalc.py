@@ -61,6 +61,20 @@ def randomSample(seed, data, train_periods, test_periods):
     endIndex = beginIndex + train_periods
     return data[beginIndex:endIndex], data[endIndex:endIndex + test_periods]
 
+
+def getContiguousDataForRnn(data, train_periods, test_periods):
+    begin_index = 0
+    end_index = data.shape[0] - (train_periods + test_periods + 1)
+    arr = []
+    for curr_index in xrange(begin_index, end_index, 1):
+        curr_end_index = curr_index + train_periods
+        arr.append((data[curr_index:curr_end_index], data[curr_end_index:curr_end_index + test_periods]))
+
+    # matrix = np.array(matrix)
+    np.random.shuffle(arr)
+
+    return [x[0] for x in arr], [x[1] for x in arr]
+
 # u_inp="Processed"
 # original = load_data(u_inp)
 # grp_data = group_data(original)
