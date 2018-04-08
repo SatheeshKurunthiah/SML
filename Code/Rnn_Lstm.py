@@ -59,6 +59,7 @@ def load_model():
 
 
 def load_data():
+    global volume_scale, change_scale
     matrix = period_class.getRnnData(train_period, test_period)
 
     volume_data = []
