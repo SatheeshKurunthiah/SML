@@ -2,8 +2,8 @@ import os
 import pickle
 
 import numpy as np
-from keras.callbacks import TensorBoard
-from keras.layers import Dense, LSTM, Merge, Dropout
+from keras.callbacks import TensorBoard, ModelCheckpoint
+from keras.layers import Dense, LSTM, Merge
 from keras.models import Sequential, model_from_json
 from keras.optimizers import RMSprop
 from sklearn.preprocessing import MinMaxScaler
@@ -29,7 +29,6 @@ def save_model(lstm_model):
     model_json = lstm_model.to_json()
     with open(json_path, 'w') as json_file:
         json_file.write(model_json)
-        lstm_model.save_weights(h5_path)
 
     print("Saved model to disk")
 
@@ -95,24 +94,22 @@ def build_model(data_points, target):
     cost = RMSprop(lr=0.001, rho=0.9, epsilon=None, decay=0.0)
 
     volume = Sequential()
-    volume.add(LSTM(train_period, input_shape=(1, train_period), return_sequences=True))
-    volume.add(Dropout(0.2))
-    volume.add(LSTM(train_period, return_sequences=True))
-    volume.add(Dropout(0.2))
+    volume.add(LSTM(train_period, input_shape=(1, train_period), dropout=0.2, return_sequences=True))
+    volume.add(LSTM(train_period, return_sequences=True, dropout=0.2))
 
     change = Sequential()
-    change.add(LSTM(train_period, input_shape=(1, train_period), return_sequences=True))
-    change.add(Dropout(0.2))
-    change.add(LSTM(train_period, return_sequences=True))
-    change.add(Dropout(0.2))
+    change.add(LSTM(train_period, input_shape=(1, train_period), dropout=0.2, return_sequences=True))
+    change.add(LSTM(train_period, return_sequences=True, dropout=0.2))
 
     output = Sequential()
     output.add(Merge([volume, change], mode='mul'))
     output.add(Dense(bin_count, activation='softmax'))
 
-    callback = TensorBoard(log_dir=tb_path, histogram_freq=0, write_graph=True, write_images=True)
+    plot_graph = TensorBoard(log_dir=tb_path, histogram_freq=0, write_graph=True, write_images=True)
+    checkpoint = ModelCheckpoint(h5_path, monitor='val_loss', verbose=1, save_best_only=True, mode='min')
+    callbacks_list = [checkpoint, plot_graph]
     output.compile(loss='categorical_crossentropy', optimizer=cost, metrics=['acc'])
-    output.fit(data_points, target, epochs=2000, verbose=0, validation_split=0.1, shuffle=True, callbacks=[callback])
+    output.fit(data_points, target, epochs=50, verbose=0, validation_split=0.1, shuffle=True, callbacks=callbacks_list)
 
     return output
 
@@ -123,7 +120,7 @@ def check_model(iter_count, lstm_model):
     for index in xrange(0, iter_count, 1):
         test_data = period_class.getChangeVolData(train_period, test_period)
 
-        volume_data = np.reshape(test_data[0][:,0],(1, train_period))
+        volume_data = np.reshape(test_data[0][:, 0], (1, train_period))
         volume_data = volume_scale.transform(volume_data)
         volume_data = volume_data.reshape(1, 1, train_period)
 
@@ -147,5 +144,5 @@ if not (os.path.isfile(json_path) and os.path.isfile(h5_path)):
 else:
     model = load_model()
 
-for i in xrange(0,100,1):
-    check_model(150, model)
+# for i in xrange(0, 100, 1):
+#     check_model(150, model)
