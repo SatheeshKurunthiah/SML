@@ -106,7 +106,7 @@ def build_model(data_points, target):
     output.add(Dense(bin_count, activation='softmax'))
 
     plot_graph = TensorBoard(log_dir=tb_path, histogram_freq=0, write_graph=True, write_images=True)
-    checkpoint = ModelCheckpoint(h5_path, monitor='val_loss', verbose=1, save_best_only=True, mode='min')
+    checkpoint = ModelCheckpoint(h5_path, monitor='val_loss', verbose=0, save_best_only=True, mode='min')
     callbacks_list = [checkpoint, plot_graph]
     output.compile(loss='categorical_crossentropy', optimizer=cost, metrics=['acc'])
     output.fit(data_points, target, epochs=50, verbose=0, validation_split=0.1, shuffle=True, callbacks=callbacks_list)
