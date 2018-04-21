@@ -2,6 +2,8 @@ import numpy as np
 
 
 def calcEMA(data, time_period):
+    data = data[:,4] #Closing price
+
     data = np.asarray(data, float)
 
     ema = np.zeros(len(data))
@@ -35,16 +37,24 @@ def calcSignalLine(closing_price_list):
 
 
 def calcKDS(data, lookback_period):
-    K = np.zeros(data.getLength())
-    D = np.zeros(data.getLength())
+    K = np.zeros(len(data))
+    D = np.zeros(len(data))
+    low = data[:,3]
+    high = data[:,2]
+    close = data[:,4]
 
-    for row in range(lookback_period, data.getLength()):
-        lowest_low = np.min(data.getCol('Low')[row - lookback_period:row + 1])
-        highest_high = np.max(data.getCol('High')[row - lookback_period:row + 1])
-        current_close = data.getCol('Close')[row]
-        K[row] = (current_close - lowest_low) / (highest_high - lowest_low) * 100
+    for row in range(lookback_period, len(data)):
+        lowest_low = np.min(low[row - lookback_period:row + 1])
+        highest_high = np.max(high[row - lookback_period:row + 1])
+        current_close = close[row]
+        diff = highest_high - lowest_low
+        if diff == 0:
+            K[row] = 100
+        else:
+            K[row] = (current_close - lowest_low) / diff * 100
         D[row] = np.average(K[row - 3:row])
-        # TODO: Handle NaN
+
+    # print ("KDS: "+str(K))
     return K, D
 
 
