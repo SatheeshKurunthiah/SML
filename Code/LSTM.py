@@ -10,7 +10,7 @@ TINY = 1e-6 # to avoid NaNs in logs
 INPUT_SIZE =4 
 OUTPUT_SIZE = 8
 LSTM_CELL_UNITS = 20
-LEARNING_RATE = 0.1
+LEARNING_RATE = 0.005
 STOCK_INDICATOR_COUNT = 5 
 inputs = tf.placeholder(tf.float32, shape = (None, None, INPUT_SIZE*STOCK_INDICATOR_COUNT)) #(time, batch, in) , multiply by 5 , because of 5 stock indicators
 outputs = tf.placeholder(tf.float32, shape = (None, None, OUTPUT_SIZE))
@@ -25,7 +25,7 @@ final_projection = lambda x: layers.linear(x, num_outputs=OUTPUT_SIZE, activatio
 # rnn_outputs = tf.Print(rnn_outputs,[rnn_outputs],"rnn_outputs: ")
 predicted_outputs = tf.map_fn(final_projection, rnn_outputs)
 # predicted_outputs = tf.Print(predicted_outputs,[predicted_outputs],"predicted_outputs : ")
-# compute elementwise cross entropy.
+# print("outputs : {}",outputs)
 error = -(outputs * tf.log(predicted_outputs + TINY) + (1.0 - outputs) * tf.log(1.0 - predicted_outputs + TINY))
 error = tf.reduce_mean(error)
 
@@ -64,8 +64,9 @@ valid_x, valid_y = generate_batch(num_bits=NUM_BITS, batch_size=100)
 session = tf.Session()
 # For some reason it is our job to do this:
 session.run(tf.initialize_all_variables())
-
-for epoch in range(1000):
+errors = []
+from matplotlib import pyplot
+for epoch in range(100):
     epoch_error = 0
     for _ in range(ITERATIONS_PER_EPOCH):
         # here train_fn is what triggers backprop. error and accuracy on their
@@ -79,9 +80,13 @@ for epoch in range(1000):
             outputs: y,
         })[0]
     epoch_error /= ITERATIONS_PER_EPOCH
+    errors.append(epoch_error)
     print (epoch_error)
     valid_accuracy = session.run(accuracy, {
         inputs:  valid_x,
         outputs: valid_y,
     })
+
+pyplot.plot(errors)
+pyplot.show()
 # print "Epoch %d, train error: %.2f, valid accuracy: %.1f %%" % (epoch, epoch_error, valid_accuracy * 100.0)
