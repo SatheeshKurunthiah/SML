@@ -19,11 +19,11 @@ from keras.layers import MaxPooling1D
 
 import Formatter
 
-json_path = '../Data/RNN/cnn_model.json'
-h5_path = '../Data/RNN/cnn_model.h5'
-tb_path = '../Data/RNN/Graph'
-volume_scale_path = '../Data/RNN/volume_scale.sav'
-change_scale_path = '../Data/RNN/change_scale.sav'
+json_path = '../Data/CNN/cnn_model.json'
+h5_path = '../Data/CNN/cnn_model.h5'
+tb_path = '../Data/CNN/Graph'
+volume_scale_path = '../Data/CNN/volume_scale.sav'
+change_scale_path = '../Data/CNN/change_scale.sav'
 scale = MinMaxScaler(feature_range=(0, 1))
 volume_scale = None
 change_scale = None
@@ -121,9 +121,8 @@ def build_model(data_points, target):
 def check_model(iter_count, cnn_model):
     global volume_scale, change_scale
     count = 0
-    for index in xrange(0, iter_count, 1):
+    for index in range(0, iter_count):
         test_data = period_class.getChangeVolData(train_period, test_period)
-        #import pdb;pdb.set_trace();
         volume_data = np.reshape(test_data[0][:, 0], (1, train_period))
         volume_data = volume_scale.transform(volume_data)
         volume_data = volume_data.reshape(1, 1, train_period)
@@ -131,7 +130,6 @@ def check_model(iter_count, cnn_model):
         change_data = np.reshape(test_data[0][:, 1], (1, train_period))
         change_data = change_scale.transform(change_data)
         change_data = change_data.reshape(1, 1, train_period)
-        import pdb;pdb.set_trace();
         prediction = cnn_model.predict([volume_data, change_data])[0][0]
         prediction = np.argmax(prediction, verbose=1)
         actual = test_data[1]
