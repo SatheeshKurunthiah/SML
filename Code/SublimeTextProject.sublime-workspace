@@ -1,0 +1,913 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"epo",
+				"epoch_error"
+			],
+			[
+				"pos",
+				"positions"
+			],
+			[
+				"MY",
+				"myPos"
+			],
+			[
+				"getPath",
+				"getPathToRing"
+			],
+			[
+				"s",
+				"state"
+			],
+			[
+				"mo",
+				"move"
+			],
+			[
+				"Get",
+				"getOppPosition"
+			],
+			[
+				"capsue",
+				"capsuleAction"
+			],
+			[
+				"capsulePa",
+				"resetComputedCapsulePath"
+			],
+			[
+				"resetCom",
+				"resetComputedMotionPlan"
+			],
+			[
+				"val",
+				"validCycle"
+			],
+			[
+				"my",
+				"myPos"
+			],
+			[
+				"prev",
+				"prevPacmanGhostState"
+			],
+			[
+				"op",
+				"opdist"
+			],
+			[
+				"min",
+				"minP"
+			],
+			[
+				"Cool",
+				"CoolUnknown"
+			],
+			[
+				"ex",
+				"excludeCap"
+			],
+			[
+				"opp",
+				"oppMinToCap"
+			],
+			[
+				"motion",
+				"motionPlan"
+			],
+			[
+				"actionV",
+				"actionValPairs"
+			],
+			[
+				"oppS",
+				"oppState"
+			],
+			[
+				"getPa",
+				"getPacmanPosition"
+			],
+			[
+				"sta",
+				"startNode"
+			],
+			[
+				"getAction",
+				"getNextActions"
+			],
+			[
+				"cap",
+				"capsulePositions"
+			],
+			[
+				"myS",
+				"myStartPos"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"lon",
+				"longestPath"
+			],
+			[
+				"long",
+				"longestPathIndex"
+			],
+			[
+				"getLong",
+				"getLongestPathToDeadEnd"
+			],
+			[
+				"leg",
+				"legalActions"
+			],
+			[
+				"geta",
+				"getActionNearestToOpponent"
+			],
+			[
+				"is",
+				"isOpponentAngry"
+			],
+			[
+				"out",
+				"outputs"
+			],
+			[
+				"count",
+				"countAndSay"
+			],
+			[
+				"max",
+				"maxSubArray"
+			],
+			[
+				"g",
+				"guiseppe"
+			],
+			[
+				"pepper",
+				"peppers"
+			],
+			[
+				"lu",
+				"luigi"
+			],
+			[
+				"ma",
+				"mario"
+			],
+			[
+				"crip",
+				"crisp"
+			],
+			[
+				"pepp",
+				"pepperoni"
+			],
+			[
+				"bac",
+				"bacon"
+			],
+			[
+				"const",
+				"const6"
+			],
+			[
+				"ba",
+				"bacon"
+			],
+			[
+				"met",
+				"meattop"
+			],
+			[
+				"bro",
+				"broccoli"
+			],
+			[
+				"thin",
+				"thinwheat"
+			],
+			[
+				"mea",
+				"meatball"
+			],
+			[
+				"meat",
+				"meattop"
+			],
+			[
+				"meatba",
+				"meatballAndOnions"
+			],
+			[
+				"moz",
+				"brocolliAndMozarella"
+			],
+			[
+				"isO",
+				"isOlives"
+			],
+			[
+				"cons",
+				"const4"
+			],
+			[
+				"che",
+				"cheese"
+			],
+			[
+				"ch",
+				"chef"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "grouping_changecalc.py",
+			"settings":
+			{
+				"buffer_size": 1287,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "main.py",
+			"settings":
+			{
+				"buffer_size": 214,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Formatter.py",
+			"settings":
+			{
+				"buffer_size": 1699,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "StockIndicators.py",
+			"settings":
+			{
+				"buffer_size": 2629,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "constants.py",
+			"settings":
+			{
+				"buffer_size": 275,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "LSTM.py",
+			"settings":
+			{
+				"buffer_size": 2682,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 409.0,
+		"last_filter": "inde",
+		"selected_items":
+		[
+			[
+				"inde",
+				"Indent XML"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: li",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 549.0
+	},
+	"console":
+	{
+		"height": 197.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Midhun/Documents/Course Content/SML/ProjectBitcoin/SML",
+		"/C/Users/Midhun/Documents/Course Content/SML/ProjectBitcoin/SML/Code"
+	],
+	"file_history":
+	[
+		"/C/Users/Midhun/Documents/Course Content/SML/ProjectBitcoin/SML/Code/LSTM.py",
+		"/C/Users/Midhun/Documents/Course Content/SML/ProjectBitcoin/SML/Code/session.py",
+		"/C/Users/Midhun/Desktop/ROS learnings",
+		"/C/Users/Midhun/Downloads/PassportApplicationForm_Main_English_V3.0_data.xml",
+		"/C/Users/Midhun/Desktop/Resume",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamCompitition/PacmanCompedetive/CompetitiveAgents.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamCompitition/PacmanCompedetive/TeamUtils.py",
+		"/C/Users/Midhun/Downloads/PacmanCompedetive/CompetitiveAgents.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamCompitition/PacmanCompedetive/pacman.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamCompitition/PacmanCompedetive/PacmanCoolGhostUnknown.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamCompitition/PacmanCompedetive/game.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/Collaboration_old/cse571-exercises/Project2_Due_Sep21/multiagent/multiagent/multiAgents.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/Submissions/Assignment1/search.py",
+		"/C/Users/Midhun/Desktop/AISubmission/1211219175_1212890092/qlearningAgents.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamCompitition/PacmanCompedetive/pacmanAgents.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamCompitition/PacmanCompedetive/PacmanAngryGhostUnknown.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamCompitition/PacmanCompedetive/PacmanAngryGhostCool.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamCompitition/PacmanCompedetive/BothCool.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamCompitition/PacmanCompedetive/BothAngry.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamCompitition/PacmanCompedetive/PacmanCoolGhostAngry.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamCompitition/PacmanCompedetive/GhostAngry.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamCompitition/PacmanCompedetive/util.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamCompitition/PacmanCompedetive/layout.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamCompitition/PacmanCompedetive/graphicsDisplay.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/Submissions/Assignment1/searchAgents.py",
+		"/C/Users/Midhun/Documents/Course Content/FOA/Assignment4/Q5_triangle.cpp",
+		"/C/Users/Midhun/Documents/Course Content/FOA/Assignment4/Q4_decodings.cpp",
+		"/C/Users/Midhun/Documents/Course Content/FOA/Assignment4/Q3_lastWord.cpp",
+		"/C/Users/Midhun/Documents/Course Content/FOA/Assignment4/Q2_subarray.cpp",
+		"/C/Users/Midhun/Documents/Course Content/FOA/Assignment4/Q1_countAndSay.cpp",
+		"/C/Users/Midhun/Downloads/test/ln.py",
+		"/C/Users/Midhun/Desktop/temp.py",
+		"/C/Users/Midhun/Desktop/reference.py",
+		"/C/Users/Midhun/Desktop/dqn_project.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/TeamWork/Project4_Due_Nov9/BayesNets/inference.py",
+		"/C/Users/Midhun/Documents/Course Content/FOA/Assignment4/triangle.cpp",
+		"/C/Users/Midhun/Documents/Course Content/FOA/Assignment4/triangle.cpp.txt",
+		"/C/Users/Midhun/Documents/Course Content/FOA/Assignment4/problem4.cpp",
+		"/C/Users/Midhun/Documents/Course Content/FOA/Assignment4/problem3.cpp",
+		"/C/Users/Midhun/Documents/Course Content/FOA/Assignment4/countAndSay.cpp",
+		"/C/Users/Midhun/Documents/Course Content/FOA/Assignment4/subseq.cpp",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503604109480.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503599958929.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503525025300.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503523878205.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503523593605.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503513662628.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503514028875.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503515171349.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503515701951.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503525230880.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503600471339.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503601791851.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503602222616.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503604387983.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503609551913.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503610324174.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503611234275.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503611601402.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503612421077.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503612761276.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503614249214.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503614529248.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503615955779.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503616371604.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503617764878.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503618071641.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503683073471.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503683563307.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503685034967.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503685368577.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503688257359.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503694930450.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503695352765.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503696689988.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503697313323.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503698678322.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503699291032.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503701139779.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503701484723.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503702387838.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503702810845.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503704008775.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503705469691.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503942504234.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503942726461.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503943620094.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503944237832.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503945515116.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503945980566.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503947384353.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503948467876.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503954634592.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503955687111.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503956929450.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503957322493.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503958514022.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503959170110.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503963533730.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503964057697.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503510449718.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503512621910.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503512024740.txt",
+		"/C/Users/Midhun/Documents/Course Content/DataMining/MyoProject/AllGroupsData/Annotation/1503510957301.txt",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/Homework2_Due_Sep21/Bonus.pl",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/Collaboration/cse571-exercises/Project2_Due_Sep21/multiagent/multiagent/game.py",
+		"/C/Users/Midhun/Documents/Course Content/Artificial Intelligence/Collaboration/cse571-exercises/Project2_Due_Sep21/multiagent/multiagent/pacman.py"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 117.0,
+		"where_history":
+		[
+			"<current file>,<open folders>",
+			"<current file>",
+			"<current file>,<open folders>",
+			"<current file>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"contrib",
+			"error",
+			"total_change",
+			"randomSample",
+			"load",
+			"randomSample\nload",
+			"main",
+			"randomSample\nrandomSample",
+			"randomSample",
+			"total_change",
+			"load_data\n",
+			"train_fn",
+			"layers",
+			"capList",
+			"getStateV",
+			"print",
+			"tu.",
+			"tu",
+			"move =",
+			"[",
+			"getNe",
+			"getNextA",
+			"simulateAction",
+			"pathToR",
+			"getPathToRing",
+			"getMinMaxActionVal",
+			"getMin",
+			"getActionFarthestToOpponent",
+			"getPathToOpponent",
+			"getActionFarthestToOpponent",
+			"getPathToOpponent",
+			"opponent\ngetPathToOpponent",
+			"opponent",
+			"getActionNearestToOpponent",
+			"opponent",
+			"getActionClosestPathToCapsules",
+			"\ngetActionClosestPathToCapsules",
+			"getActionClosestPathToCapsules\n",
+			"getActionClosestPathToCapsules",
+			"resetComputedCapsulePath",
+			"getActionClosestPathToCapsules",
+			"resetComputedMotionPlan",
+			"validLongest",
+			"validCycle",
+			"validLongest",
+			"getCycleStartingAt",
+			"resetComputedMotionPlan",
+			"getActionToLongestPath",
+			"resetComputedMotionPlan",
+			"getActionToLongestPath",
+			"Ring",
+			"getActionFarthestToOpponent",
+			"getActionFarthestToOpponent\n",
+			"getActionFarthestToOpponent",
+			"getCycleStartingAt",
+			"()\n",
+			"Go to capsule",
+			"resetComputedMotionPlan",
+			"prevPacmanGhostState",
+			"resetAllMotionPlans",
+			"getActionClosestPathToCapsules",
+			"getTrueDistToClosestCapsule",
+			"capsule",
+			"capsu",
+			"getActionClosestPathToCapsules",
+			"inf",
+			"getActionClosestPathToCapsules",
+			"getOppPosition",
+			"getActionClosestPathToCapsules",
+			"capsule",
+			"pathToGoal",
+			"getCycleStartingAt",
+			"v",
+			"getCycleStartingAt",
+			"capsulePath",
+			"        #",
+			"getActionToLongestPath",
+			"        #",
+			"pathToCapsule",
+			"Configuration",
+			"generateSuccessor",
+			"successor",
+			"getSuccessors",
+			"getSuccessorState",
+			"getSuccessor",
+			"decrementTimer",
+			"angryTimer",
+			"ANGRY_TIME",
+			"ANGRY",
+			"ANGRY_TIMER",
+			"ANGRY_TIME",
+			"angryTimer",
+			"buildActionTree",
+			"getMinMaxValue",
+			"GetCh",
+			"GfetCh",
+			"GetCh",
+			"getTrueDistToClosestCapsule",
+			"getPathFromTo",
+			"getStateValue",
+			"getNextActions",
+			"getStateValue",
+			"getPathFromTo",
+			"getNextActions",
+			"getPathFromTo",
+			"min",
+			"getOpponentAngryTimer",
+			"getMyPacmanAngryTimer",
+			"getPathToOpponent",
+			"buildActionTree",
+			"getPathToOpponent\ngetPathToOpponent",
+			"getAction",
+			"getOpponen",
+			"buildActionTree",
+			"GetC",
+			"simulateAction",
+			"getNextActions",
+			"getMyPacmanAngryTimer",
+			"angryTimer",
+			"capsule",
+			"getNextActions",
+			"getActions",
+			"getPathFromTo",
+			"sort",
+			"min",
+			"Capsu",
+			"capsule",
+			"angry"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"tu.simulateAction",
+			"tu.getCycleStartingAt"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "grouping_changecalc.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								790,
+								332
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 96.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "main.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 214,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								214,
+								214
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Formatter.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1699,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1080,
+								1096
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 46.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "StockIndicators.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2629,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1666,
+								1666
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "constants.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "LSTM.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2682,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								458,
+								430
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 154.0
+	},
+	"pinned_build_system": "",
+	"project": "SublimeTextProject.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"stoc",
+				"Code\\StockIndicators.py"
+			],
+			[
+				"cons",
+				"Code\\constants.py"
+			],
+			[
+				"main",
+				"Code\\main.py"
+			],
+			[
+				"util",
+				"util.py"
+			],
+			[
+				"lay",
+				"layout.py"
+			],
+			[
+				"com",
+				"CompetitiveAgents.py"
+			],
+			[
+				"game",
+				"multiagent\\game.py"
+			],
+			[
+				"pacm",
+				"multiagent\\pacman.py"
+			],
+			[
+				"game.",
+				"multiagent\\game.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 452.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

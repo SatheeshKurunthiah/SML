@@ -17,7 +17,7 @@ class PeriodSample:
 
     def classifyBins(self, value):
         bin = -1
-        if value < 0:
+        if value < 0:   
             bin = 3
             for i in cns.TARGET_BINS:
                 if value < (-1) * i:
@@ -36,13 +36,16 @@ class PeriodSample:
 
     def getIndicatorData(self, train_periods, test_periods):
         gap_slab = max(cns.KDS_PERIOD, cns.RSI_PERIOD, cns.MACD_PERIOD, cns.MACD_SIGNAL_PERIOD)
-        indicators = np.zeros((train_periods + gap_slab, 4))
+        indicators = np.zeros((train_periods + gap_slab, 5))
         train, test = self.__getSample(train_periods + gap_slab, test_periods)
         test = grp.total_change(test)
-        # indicators[:, 0] = sind.calcEMA(train, cns.KDS_PERIOD)
-        # indicators[:, 1] = sind.calcKDS(train, cns.KDS_PERIOD)
-        indicators[:, 2] = sind.RSI(train, cns.RSI_PERIOD)
-        indicators[:, 3] = sind.OBV(train)
+        k,d=sind.calcKDS(train, cns.KDS_PERIOD)
+
+        indicators[:, 0] = sind.calcEMA(train, cns.KDS_PERIOD)
+        indicators[:, 1] = k
+        indicators[:, 2] = d
+        indicators[:, 3] = sind.RSI(train, cns.RSI_PERIOD)
+        indicators[:, 4] = sind.OBV(train)
 
         return indicators[gap_slab:], self.classifyBins(test)
 
@@ -52,3 +55,9 @@ class PeriodSample:
         for x in range(len(train)):
             arr.append((train[x][:, [5, 8]], self.classifyBins(grp.total_change(test[x]))))
         return arr
+
+
+if __name__ == "__main__":
+    period_sample = PeriodSample(10)
+    print (data.getNames())
+    print (period_sample.getIndicatorData(4,3))
