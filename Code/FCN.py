@@ -1,5 +1,5 @@
-from Code import Formatter
-from Code import ANN as nn
+import Formatter
+import ANN as nn
 import numpy as np
 
 train_period = 24*7  # 7 days
